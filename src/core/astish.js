@@ -7,6 +7,8 @@ let ruleClean = /\/\*[^]*?\*\/|\s\s+|\n/g;
  * @returns {Object}
  */
 export let astish = (val) => {
+    if (typeof ast != 'string') return val;
+
     let tree = [{}];
     let block;
 
